@@ -32,9 +32,18 @@ html {
 }
 
 body {
+  background-attachment: fixed;
+  background-image: url('/assets/svgs/textured-blob-body-bg-top.svg'),
+                    url('/assets/svgs/textured-blob-body-bg-bottom.svg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: top right,
+                       bottom left;
+
   background-color: inherit;
   color: inherit;
   container-type: inline-size;
+  position: relative;
 }
 
 body > .layout {
@@ -98,22 +107,18 @@ header[role="banner"] {
   grid-template-rows:
     [navigation] max-content
     [hero] auto;
-
-  background-image: url('data:image/svg+xml,<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1957 480" width="1957" height="480"><g id="Design"><path fill="var(--surface-1)" d="m2488.8 140.3c0 0-402.1 521.1-761 271.1-358.8-250-531.6-166.1-696.1-116.9-164.4 49.2-398.5 38.9-547.8-79.9-199.8-159-311.6 21.8-463.8-173.3-152.2-195.2 485.5-937.1 485.5-937.1 0 0 281.5-469.3 331.4-445.1 374.6 181.7 1968 954.3 1968 954.3z"/></g></svg>');
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: top right;
-
 }
 
 nav:is([aria-label="Main"]) {
-  background-color: var(--surface-1);
+  background-color: transparent;
   color: var(--text-1);
-  justify-content: center;
-  grid-column: [full-width];
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  justify-content: flex-start;
+  grid-column: full-width;
   grid-row: navigation;
   padding: var(--spacing-block) var(--spacing-inline);
-/*   width: 10svw; */
+  position: fixed;
 }
 
 header[role="banner"] nav ul {
@@ -130,7 +135,6 @@ header[role="banner"] nav ul {
   @container (min-width: 500px) {
     flex-direction: row;
     gap: var(--spacing-inline);
-    margin-inline: auto;
   }
 }
 
