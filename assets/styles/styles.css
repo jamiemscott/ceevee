@@ -1,6 +1,6 @@
 :root {
 
-  color-scheme: light dark;
+  color-scheme: light;
 
   --canvas: #e9e9e5 , #111111;
   --ink: light-dark(var(--purple-9) , var(--orange-9));
@@ -32,13 +32,12 @@ html {
 }
 
 body {
-  background: inherit;
+  background-color: inherit;
   color: inherit;
   container-type: inline-size;
 }
 
 body > .layout {
-  
   max-width: 100svw;
   min-height: 100vh;
 }
@@ -87,6 +86,7 @@ body > .layout {
 /* header */
 header[role="banner"] {
   align-items: center;
+  border: 1px solid red;
   display: grid;
     column-gap: var(--spacing-inline);
     row-gap: var(--spacing-block);
@@ -98,6 +98,12 @@ header[role="banner"] {
   grid-template-rows:
     [navigation] max-content
     [hero] auto;
+
+  background-image: url('data:image/svg+xml,<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1957 480" width="1957" height="480"><g id="Design"><path fill="var(--surface-1)" d="m2488.8 140.3c0 0-402.1 521.1-761 271.1-358.8-250-531.6-166.1-696.1-116.9-164.4 49.2-398.5 38.9-547.8-79.9-199.8-159-311.6 21.8-463.8-173.3-152.2-195.2 485.5-937.1 485.5-937.1 0 0 281.5-469.3 331.4-445.1 374.6 181.7 1968 954.3 1968 954.3z"/></g></svg>');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: top right;
+
 }
 
 nav:is([aria-label="Main"]) {
@@ -161,14 +167,6 @@ section:not([aria-label="Introduction"]) header {
     grid-column: aside-primary;
     grid-row: auto;
   }
-}
-
-#about {
-  background-color: var(--canvas);
-  background-image: url('data:image/svg+xml,<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1957 480" width="1957" height="480"><g id="Design"><path fill="var(--surface-1)" d="m2488.8 140.3c0 0-402.1 521.1-761 271.1-358.8-250-531.6-166.1-696.1-116.9-164.4 49.2-398.5 38.9-547.8-79.9-199.8-159-311.6 21.8-463.8-173.3-152.2-195.2 485.5-937.1 485.5-937.1 0 0 281.5-469.3 331.4-445.1 374.6 181.7 1968 954.3 1968 954.3z"/></g></svg>');
-  background-repeat: no-repeat;
-  background-size: 20% 100%;
-  background-position: bottom left;
 }
 
 section:not([aria-label="Introduction"]) div:first-of-type {
