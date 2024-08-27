@@ -37,6 +37,7 @@ body {
   background-color: inherit;
   color: inherit;
   container-type: inline-size;
+  min-height: 100svh;
 }
 
 body > .layout {
