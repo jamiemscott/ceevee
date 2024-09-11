@@ -38,7 +38,7 @@ body > .layout {
 }
 
 /* Layout Utilities */
-/* .layout {
+.layout {
   align-items: center;
   display: grid;
     column-gap: var(--spacing-inline);
@@ -51,7 +51,7 @@ body > .layout {
     [main-end footer-start] auto 
     [footer-end];
   justify-items: stretch;
-} */
+}
 
 /* .content-grid {
   display: grid;  
@@ -133,21 +133,21 @@ header[role="banner"] {
 }
 
 /* main */
-/* main {
+main {
   grid-row: main;
-} */
+}
 
-/* main section {
+main section {
   height: var(--section-height);
   margin-inline:auto;
-} */
+}
 
-/* section[aria-label="Introduction"] {
+section[aria-label="Introduction"] {
   padding-block: var(--spacing-block);
   padding-inline: var(--spacing-inline);
-} */
+}
 
-/* section:not([aria-label="Introduction"]) header {
+section:not([aria-label="Introduction"]) header {
   grid-column: auto;
   grid-row: header;
   
@@ -155,26 +155,26 @@ header[role="banner"] {
     grid-column: aside-primary;
     grid-row: auto;
   }
-} */
+}
 
-/* section:not([aria-label="Introduction"]) div:first-of-type {
+section:not([aria-label="Introduction"]) div:first-of-type {
   grid-column: auto;
   grid-row: content;
   
   @container (min-width: 500px) {
     grid-row: auto;
   }
-} */
+}
 
-/* section:not([aria-label="Introduction"]) :where(p) {
+section:not([aria-label="Introduction"]) :where(p) {
   max-width: fit-content;
-} */
+}
 
 /* footer */
-/* footer {
+footer {
   grid-row: footer;
   padding: var(--spacing-block) var(--spacing-inline);
-} */
+}
 
 /* utility classes */
 .invisible {
