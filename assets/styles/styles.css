@@ -32,11 +32,11 @@ html {
   background: var(--canvas);
   color: var(--ink);
   font-family: var(--font-humanist);
-  height: 100vh;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--blue-12) url(/assets/images/brown-tree-in-forest-original.webp) no-repeat center bottom fixed;
+  /* background: var(--blue-12) url(/assets/images/brown-tree-in-forest-original.webp) no-repeat center bottom fixed; */
   background-size: cover;
   color: inherit;
   container-type: inline-size;
@@ -46,12 +46,6 @@ body {
 }
 
 body > .layout {
-  max-width: 100svw;
-  min-height: 100vh;
-}
-
-/* Layout Utilities */
-.layout {
   align-items: center;
   backdrop-filter: blur(5px);
   display: grid;
@@ -65,6 +59,8 @@ body > .layout {
     [main-end footer-start] auto 
     [footer-end];
   justify-items: stretch;
+  max-width: 100svw;
+  min-height: 100vh;
 }
 
 .content-grid {
@@ -139,13 +135,12 @@ header[role="banner"] {
   justify-content: flex-end;
   margin-inline: var(--spacing-inline);
   padding-block: var(--spacing-block);
-  display: none;
 }
 
 nav:is([aria-label="Main"]) {
   background-color: transparent;
   color: var(--text-1);
-  width: fit-content;
+  width: 100%;
 }
 
 header[role="banner"] {
@@ -155,13 +150,13 @@ header[role="banner"] {
     display: flex;
     flex-flow: column nowrap;
     gap: var(--spacing-block);
-    justify-content: center;
+    justify-content: flex-end;
     list-style: none;
     margin: 0;
     padding: 0;
-    width: max-content;
   
     @container (min-width: 500px) {
+      align-items: center;
       flex-direction: row;
       gap: var(--spacing-inline);
     }
@@ -170,6 +165,29 @@ header[role="banner"] {
   nav li {
     color: var(--ink);
     padding: 0;
+
+    &:first-of-type {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-inline-end: auto;
+      
+
+      a:is(:link, :visited, :hover, :active) {
+        visibility: hidden;
+
+        &::before {
+          aspect-ratio: 43 / 50;
+          content: url(/assets/svgs/signature-initials-white.svg);
+          display: block;
+          height: 40px;
+          visibility: visible;
+        }
+
+      }
+
+      
+
+    }
   
     a:is(:link, :visited, :hover, :active) {
       align-items: center;
@@ -194,6 +212,7 @@ main {
 
 main section {
   margin-inline:auto;
+  min-height: var(--section-height);
 }
 
 section[aria-label="Introduction"] {
@@ -201,7 +220,6 @@ section[aria-label="Introduction"] {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  padding-block: var(--spacing-block);
   padding-inline: var(--spacing-inline);
   position: relative;
 
@@ -209,7 +227,7 @@ section[aria-label="Introduction"] {
     position: relative;
   }
 
-  svg {
+  img {
     filter: drop-shadow(5px 5px 10px var(--canvas));
     height: calc(var(--section-height) * 0.7);
     width: auto;
@@ -221,6 +239,25 @@ section[aria-label="Introduction"] {
     inset-block-end: 32%;
     inset-inline-start: 25%;
     position: absolute;
+  }
+
+}
+
+section.content-grid {
+
+  header {
+    grid-column: content-start / aside-secondary-end;
+    grid-row: header;
+  }
+
+  div:first-of-type {
+    grid-column: content-start /  aside-secondary-end;
+    grid-row: content;
+  }
+
+  aside {
+    grid-column: content;
+    grid-row: content;
   }
 
 }
