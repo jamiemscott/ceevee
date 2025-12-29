@@ -36,7 +36,7 @@ html {
 }
 
 body {
-  /* background: var(--blue-12) url(/assets/images/brown-tree-in-forest-original.webp) no-repeat center bottom fixed; */
+  background: var(--gray-12) url(/assets/images/brown-tree-in-forest-original.webp) no-repeat center bottom fixed;
   background-size: cover;
   color: inherit;
   container-type: inline-size;
@@ -123,6 +123,9 @@ body > .layout {
 /* header */
 header[role="banner"] {
   align-items: center;
+  backdrop-filter: blur(5px);
+  background: var(--gray-12) url(/assets/images/brown-tree-in-forest-original.webp) no-repeat center bottom fixed;
+  background-size: cover;
   border-image: var(--horizontal-gradient-light);
   border-image-slice: 1;
   border-block-start: 0;
@@ -132,9 +135,12 @@ header[role="banner"] {
   flex-flow: row nowrap;
   grid-column: full-width;
   grid-row: header;
+  inset-block-start: 0;
   justify-content: flex-end;
   margin-inline: var(--spacing-inline);
   padding-block: var(--spacing-block);
+  position: sticky;
+  z-index: var(--layer-5);
 }
 
 nav:is([aria-label="Main"]) {
