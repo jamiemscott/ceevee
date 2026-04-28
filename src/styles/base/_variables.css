@@ -1,0 +1,13 @@
+:root {
+  --bg:   #0D0D0D;
+  --srf:  #141414;
+  --red:  #8B1A1A;
+  --gold: #C9A84C;
+  --t1:   #F0EDE8;
+  --t2:   #7A7570;
+  --t3:   #3A3530;
+  --rule: #242424;
+  --df: 'Cormorant Garant', Georgia, serif;
+  --bf: 'DM Sans', system-ui, sans-serif;
+  --mf: 'JetBrains Mono', monospace;
+}

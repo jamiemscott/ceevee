@@ -1,0 +1,23 @@
+#cine-skip {
+  position: fixed;
+  bottom: 32px;
+  right: 44px;
+  z-index: 600;
+  font-family: var(--mf);
+  font-size: 9px;
+  color: var(--t3);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 3s forwards;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+#cine-skip:hover {
+  color: var(--t2);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}

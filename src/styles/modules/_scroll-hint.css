@@ -1,0 +1,75 @@
+.scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+/* travelling pulse line */
+.sh-line-wrap {
+  position: relative;
+  width: 1px;
+  height: 72px;
+  background: rgba(139, 26, 26, 0.15);
+  overflow: hidden;
+}
+
+.sh-line-wrap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 55%;
+  top: -55%;
+  background: linear-gradient(to bottom, transparent, rgba(139, 26, 26, 0.9), transparent);
+  animation: lineTravel 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes lineTravel {
+  0%   { top: -55%; }
+  100% { top: 110%; }
+}
+
+/* cascading chevrons */
+.sh-chevrons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.sh-chev {
+  width: 13px;
+  height: 13px;
+  border-right: 1.5px solid var(--red);
+  border-bottom: 1.5px solid var(--red);
+  transform: rotate(45deg);
+  opacity: 0;
+  animation: chevDrop 1.9s ease-in-out infinite;
+}
+
+.sh-chev:nth-child(1) { animation-delay: 0s; }
+.sh-chev:nth-child(2) { animation-delay: 0.22s; }
+.sh-chev:nth-child(3) { animation-delay: 0.44s; }
+
+@keyframes chevDrop {
+  0%        { opacity: 0;    transform: rotate(45deg) translate(-2px, -2px); }
+  25%, 65%  { opacity: 0.85; transform: rotate(45deg) translate(0, 0); }
+  100%      { opacity: 0;    transform: rotate(45deg) translate(2px, 2px); }
+}
+
+.sh-text {
+  font-family: var(--mf);
+  font-size: 9px;
+  color: rgba(240, 237, 232, 0.18);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  animation: textBreath 2s ease-in-out infinite;
+}
+
+@keyframes textBreath {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
+}

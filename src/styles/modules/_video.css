@@ -1,0 +1,9 @@
+#cine-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: sepia(0.55) contrast(1.08) brightness(0.82) saturate(0.85);
+}
