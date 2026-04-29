@@ -17,7 +17,7 @@
   gap: 52px;
 }
 
-.hero-sig-inner img {
+.hero-sig-svg {
   display: block;
   filter: brightness(1.35);
   inline-size: min(560px, 66vw);
