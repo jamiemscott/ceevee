@@ -1,357 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/open-props">
-  <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/open-props/colors-hsl.min.css">     
-  <link rel="stylesheet" href="assets/styles/styles.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
-
-  <title>Jamie-Scott - Frontend Web Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jamie Scott — Frontend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.min.css">
 </head>
+<body>
 
-<body name="top">
+<!-- ─── CINE STAGE — countdown and video share this frame ─── -->
+<div id="cine-stage">
+  <div id="cine-frame">
 
-<div class="layout">
-  
-  <header role="banner" aria-label="Main Navigation">
+    <div class="cine-strip cine-strip--l"></div>
 
-    <nav role="navigation" aria-label="Main">
+    <div id="cine-wrap">
 
-      <ul>
-        <li>
-          <a href="#top">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#employment">Employment</a>
-        </li>
-        <li>
-          <a href="#technicalProficiencies">Technical Proficiencies</a>
-        </li>
-        <!-- <li>
-          <a href="#projects">Projects</a>
-        </li> -->
-        <li>
-          <a href="#testimonials">Testimonials</a>
-        </li>
-        <li>
-          <a href="#getInTouch">Get In Touch</a>
-        </li>
-      </ul>
+      <!-- video (paused until countdown ends) -->
+      <video id="cine-video" muted playsinline>
+        <source src="https://res.cloudinary.com/jamie-scott-co-uk/video/upload/q_auto,f_auto,vc_auto/videos/man-walking-in-a-forest-on-a-misty-morning" type="video/mp4">
+      </video>
 
-    </nav>
-
-  </header>
-
-    <main class="layout-grid">
-      
-      <section id="hero" name="hero" role="region" aria-label="Introduction">
-        <div>
-          <img aria-hidden="true" src="assets/svgs/signature-white.svg" alt="">
-          <h1 hidden role="heading" aria-level="1">Jamie Scott</h1>
-          <p>Web Designing, VW Driving, Tattooed Geek!</p>
-          <nav class="social"></nav>
-        </div>
-      </section>
-
-      <section id="about" name="about" class="content-grid" role="region" aria-label="About">
-        <header>
-          <h2>About Me</h2>
-        </header>
-        <div> 
-          <p>Technically minded and solutions-oriented professional with substantial experience in optimising user-centric websites and applications, as well as implementing new features based on user feedback and industry trends.</p>
-
-          <p>Known for building custom web solutions by using industry leading content management systems involving Drupal, JavaScript, HTML, CSS, and low-code platforms to enhance user experiences and streamline development processes. Proficient in leading development initiatives, driving technical architecture, and deploying scalable solutions.</p>
-
-          <p>Skilled in conducting thorough testing and debugging of applications to identify and fix issues, ensuring high-quality front-end code. Adept at enhancing functionality, improving site speed, and ensuring responsive design across platforms and devices.</p> 
-          
-          <p>Demonstrated leadership in guiding development teams, executing scalable frameworks for information exchange, and integrating cutting-edge technologies into existing and new software projects. Astute in creating inclusive and user-friendly web experiences by implementing best practices and ensuring compliance with accessibility standards.</p>
-
-          <aside>
-            <h3>Areas of Expertise</h3>
-  
-            <ul>
-              <li>
-                <details name="expertise">
-                  <summary>Web Application Creation</summary>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos enim fugiat optio vel nesciunt doloribus animi, amet blanditiis, facilis eveniet exercitationem dolore eaque quae tenetur consequatur cumque nostrum aliquam? Doloremque.</p>
-                </details>
-                </li>
-              <li>
-                <details name="expertise">
-                  <summary>Content Management Systems</summary>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, possimus voluptate, totam vitae consequuntur non dignissimos eum distinctio doloribus nobis cumque quas. Quod consequuntur odit eum! A ullam sed eligendi!</p>
-                </details>
-              </li>
-              <li>
-                <details name="expertise">
-                  <summary>WCAG Accessibility</summary>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, possimus voluptate, totam vitae consequuntur non dignissimos eum distinctio doloribus nobis cumque quas. Quod consequuntur odit eum! A ullam sed eligendi!</p>
-                </details>
-              </li>
-              <li>
-                <details name="expertise">
-                  <summary>Strategic Planning &amp; Execution</summary>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, possimus voluptate, totam vitae consequuntur non dignissimos eum distinctio doloribus nobis cumque quas. Quod consequuntur odit eum! A ullam sed eligendi!</p>
-                </details>
-              </li>
-              <li>
-                <details name="expertise">
-                  <summary>Template Creation &amp; Implementation</summary>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, possimus voluptate, totam vitae consequuntur non dignissimos eum distinctio doloribus nobis cumque quas. Quod consequuntur odit eum! A ullam sed eligendi!</p>
-                </details>
-              </li>
-              <li>
-                <details name="expertise">
-                  <summary>UX &amp; UI Best Practices</summary>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, possimus voluptate, totam vitae consequuntur non dignissimos eum distinctio doloribus nobis cumque quas. Quod consequuntur odit eum! A ullam sed eligendi!</p>
-                </details>
-              </li>
-              <li>
-                <details name="expertise">
-                  <summary>Team Leadership &amp; Mentoring</summary>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, possimus voluptate, totam vitae consequuntur non dignissimos eum distinctio doloribus nobis cumque quas. Quod consequuntur odit eum! A ullam sed eligendi!</p>
-                </details>
-              </li>
-              <li>
-                <details name="expertise">
-                  <summary>Performance Optimisation</summary>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, possimus voluptate, totam vitae consequuntur non dignissimos eum distinctio doloribus nobis cumque quas. Quod consequuntur odit eum! A ullam sed eligendi!</p>
-                </details>
-              </li>
-              <li>
-                <details name="expertise">
-                  <summary>Web Based Marketing</summary>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, possimus voluptate, totam vitae consequuntur non dignissimos eum distinctio doloribus nobis cumque quas. Quod consequuntur odit eum! A ullam sed eligendi!</p>
-                </details>
-              </li>
-            </ul>
-                    
-          </aside>
-
-        </div>
-
-        
-      </section>
-
-      <section id="employment" name="employment" class="content-grid" role="region" aria-label="Employment">
-        <header>
-          <h2>Employment</h2>
-        </header>
-        <div> 
-          <ol>
-            <li>
-              <header>
-                <h3>Unipro Ltd, UK</h3>
-                <h4>Front End Developer</h4>
-                <time datetime="2019-08-01">Aug 2019 - Sep 2024</time>
-              </header>
-              <div>
-                <p>Developed and implemented Drupal themes to meet complex requirements of major pharmaceutical clients, optimising functionality and user experience. Delivered and customised a low-code dashboard for a leading music industry analytics platform, enhancing data accessibility and visualisation. Supported sales and marketing teams with low-code tools for conference use, capturing and converting potential sales leads.</p>
-                <ul>
-                  <li>Spearheaded creation of <abbr title="What You See Is What You Get">WYSIWYG</abbr> web builder tool for internal use by global company and streamlined end-to-end web design processes across teams.</li>
-                  <li>Created immersive, guided tours for laboratory environments aimed at driving engagement and innovation by managing augmented reality software.</li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <header>
-                <h3>Charles Stanley Direct, UK</h3>
-                <h4>Front End Developer</h4>
-                <time datetime="2017-07-01">Jun 2017 - Aug 2019</time>
-              </header>
-              <div>
-                <p>Maintained Charles Stanley Direct's &quot;brochureware&quot; website by using Drupal to ensure seamless functionality and content updates. Developed and executed new Drupal templates to optimise site usability and visual appeal for better user experience. Designed and implemented <abbr title="Cascading Style Sheets">CSS</abbr> architecture for &quot;MyCS&quot; project, including creation of dynamic living style guide. Explored and evaluated emerging technologies such as <abbr title="Artificial Inteligence">AI</abbr>-based chatbots for potential implementation by collaborating with the Managing Director.</p>
-                <ul>
-                  <li>Enhanced client-side functionality for a .NET-based website, improving performance and user interaction.</li>
-                  <li>Led research and strategic planning for upgrading to Drupal 8 by utilising <abbr title="JavaScript Object Notation">JSON</abbr>-based headless architecture integrated with .Net services project.</li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <header>
-                <h3>Carter Scott Consulting Ltd, UK</h3>
-                <h4>Director / Front End Developer</h4>
-                <time datetime="2016-06-01">Jun 2017 - Aug 2019</time>
-              </header>
-              <div>
-                <p>Configured and maintained <abbr title="Internet Information Services">IIS</abbr> server environments, ensuring system stability and performance. Liaised with .Net server-side team and provided comprehensive client-side support to ensure project delivery and functionality. Partnered with press agency to modernise and future-proof their web presence, whilst advising tattoo artists on budget-friendly web solutions for establishing online platforms.</p>
-                <ul>
-                  <li>Optimised existing Drupal-based content management system and improved functionality and overall user experience.</li>
-                  <li>Introduced Drupal revisioning system and streamlined deployments to both live and disaster recovery servers for enhanced operational resilience.</li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <header>
-                <h3>Dods Group PLC, UK</h3>
-                <h4>Director / Front End Developer</h4>
-                <time datetime="2016-06-01">Jun 2017 - Aug 2019</time>
-              </header>
-              <div>
-                <p>Designed and developed new sites, as well as created online marketing assets in alignment with branding and promotional strategies. Collaborated on large-scale project planning with head of design to drive project success and alignment with business goals. Trained and coached staff in website management, empowering teams to update platforms. Built a reusable template system, enabling rapid and efficient deployment of new websites. Modernised phase one of PoliticsHome.com's bespoke CMS, followed by phase two's transition to Drupal. Conducted information architecture and content planning to refine site taxonomy. Designed and tested multiple HTML email templates, ensuring compatibility across wide range of clients, including legacy platforms. Mentored events staff on managing email templates, promoting self-sufficiency, and reducing support requirements.</p>
-                <ul>
-                  <li>Centralised systems by boosting Dods' operations to ~100% Drupal implementation.</li>
-                  <li>Managed and maintained over 80 time sensitive events websites for optimal performance and functionality.</li>
-                  <li>Streamlined workflows and processes to improve operational efficiency and project turnaround times.</li>
-                  <li>Led a three phased upgrade of <a href="https://www.politicshome.com" target="blank">PoliticsHome.com</a> and increased site speed by 33% whilst improving page conversion rates.</li>
-                  <li>Introduced <abbr title="syntactically awesome style sheets">Sass</abbr> <abbr title="Cascading Style Sheets">CSS</abbr> preprocessor and optimised <abbr title="Cascading Style Sheets">CSS</abbr> workflows for enhanced scalability and maintainability.</li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <header>
-                <h3>Additional Experience</h3>
-                <ul>
-                  <li><strong>Web Designer</strong> Dark Dreams, Freelance</li>
-                  <li><strong>Senior Designer</strong> Fortuna Networks/Acorn Square Ltd, UK</li>
-                  <li><strong>Web Designer</strong> <a href="https://www.lovemoney.com" target="_blank">lovemoney.com</a>, UK</li>
-                  <li><strong>Web Designer</strong> <a href="https://www.fool.co.uk" target="_blank">fool.co.uk</a>, UK</li>
-                  <li><strong>Senior Web Designer</strong> Virtual Webmaster, UK</li>
-                  <li><strong>Information Architect</strong> Calleo UK Ltd, UK</li>
-                </ul>
-              </header>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="technicalProficiencies" name="technicalProficiencies" class="content-grid" role="region" aria-label="Technical Proficiencies">
-        <header>
-          <h2>Technical Proficiencies</h2>
-        </header>
-        <div> 
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p> 
-        </div>
-      </section>
-
-        <!-- <section id="projects" name="projects" class="content-grid" role="region" aria-label="Projects">
-          <header>
-            <h2 role="heading" aria-level="2">Projects</h2>
-          </header>
-          <div> 
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p> 
+      <!-- countdown sits inside the same frame, overlaying the (black) video -->
+      <div id="cine-countdown">
+        <div class="cd-frame">
+          <svg class="cd-rings" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="200" cy="200" r="192" stroke="rgba(240,237,232,0.55)" stroke-width="1.5" fill="none"/>
+            <circle cx="200" cy="200" r="148" stroke="rgba(240,237,232,0.2)"  stroke-width="0.8" fill="none"/>
+            <circle cx="200" cy="200" r="96"  stroke="rgba(240,237,232,0.25)" stroke-width="0.8" fill="none"/>
+            <line x1="0"   y1="200" x2="400" y2="200" stroke="rgba(240,237,232,0.35)" stroke-width="0.8"/>
+            <line x1="200" y1="0"   x2="200" y2="400" stroke="rgba(240,237,232,0.35)" stroke-width="0.8"/>
+            <line x1="200" y1="8"   x2="200" y2="32"  stroke="rgba(240,237,232,0.6)"  stroke-width="2"/>
+            <line x1="200" y1="368" x2="200" y2="392" stroke="rgba(240,237,232,0.6)"  stroke-width="2"/>
+            <line x1="8"   y1="200" x2="32"  y2="200" stroke="rgba(240,237,232,0.6)"  stroke-width="2"/>
+            <line x1="368" y1="200" x2="392" y2="200" stroke="rgba(240,237,232,0.6)"  stroke-width="2"/>
+            <line x1="56"  y1="56"  x2="70"  y2="70"  stroke="rgba(240,237,232,0.3)"  stroke-width="1"/>
+            <line x1="344" y1="56"  x2="330" y2="70"  stroke="rgba(240,237,232,0.3)"  stroke-width="1"/>
+            <line x1="56"  y1="344" x2="70"  y2="330" stroke="rgba(240,237,232,0.3)"  stroke-width="1"/>
+            <line x1="344" y1="344" x2="330" y2="330" stroke="rgba(240,237,232,0.3)"  stroke-width="1"/>
+          </svg>
+          <div class="cd-sweep-wrap">
+            <div class="cd-sweep" id="cd-sweep"></div>
           </div>
-        </section> -->
+          <div class="cd-number" id="cd-num">5</div>
+        </div>
+        <div class="cd-meta">
+          <span>JS&nbsp;·&nbsp;MMXXVI</span>
+          <span>FR&nbsp;24</span>
+          <span>Reel&nbsp;01</span>
+        </div>
+      </div>
 
-        <section id="testimonials" name="testimonials" class="content-grid" role="region" aria-label="Testimonials">
-          <header>
-            <h2>Testimonials</h2>
-          </header>
-          <div> 
-            <ul>
-              <li>
-                <details name="testimonials">
-                  <summary>
-                    <a href="https://www.linkedin.com/in/magnus-wheatley-ab341253" target="_blank">
-                      <img src="https://media.licdn.com/dms/image/v2/C4D03AQF38Lvx7br49w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1623832933007?e=1738800000&v=beta&t=m27QTU8hFzcyf6wj2J_VFD6Uw2tVY2ga2fNeteLTt4U" alt="Magnus Wheatley">
-                    </a>
-                    <h3>Magnus Wheatley</h3>
-                  </summary>
-                  <p>I worked with Jamie over a number years developing a new frontend for a highly competitive trading platform. His ability to work under pressure is peerless and Jamie has an ability to really understand what the expected should be and can then enhance the final delivery to over-achieve. He's a brilliant, foresightful developer and I would suggest to any future employer that he would be a major asset for your business. I have no hesitancy in highly recommending him as a true professional in his field - and also a thoroughly enjoyable person to work with and alongside.</p>
-                </details>
-              </li>
-              <li>
-                <details name="testimonials">
-                  <summary>
-                    <a href="https://www.linkedin.com/in/vikki-abols-96b15426/" target="_blank">
-                      <img src="https://media.licdn.com/dms/image/v2/C4D03AQFMVyXZKXzYtg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1587543848796?e=1738800000&v=beta&t=9UCUix5VAomFdBPAbn77iM8gqJRgi7-neIw6fszfeIM" alt="Vikki Abols">
-                    </a>
-                    <h3>Vikki Abols</h3>
-                  </summary>
-                  <p>Jamie is such a talented designer and epic to work with. Not only is he an amazing designer, but he has ingenious web skills with an eye for detail. Jamie is very innovative and always looking for new solutions and fresh ideas that can advance his knowledge to exceed his client's expectations and goals. Jamie is a fun person to work with, and is always helpful and insightful. He is a passionate designer and always seems to have great awareness of new creative strategies and technology, which makes him a great asset to any company.</p>
-                </details>
-              </li>
-              <li>
-                <details name="testimonials">
-                  <summary>
-                    <a href="https://www.linkedin.com/in/karenlisabell/" target="_blank">
-                      <img src="https://media.licdn.com/dms/image/v2/D4E03AQENt_WkfoJEFw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718329084927?e=1738800000&v=beta&t=Jokpb50JYVrcZDKvZImSHyoBG9Yj_y2aDOVW9blvtII" alt="Karen Bell">
-                    </a>
-                    <h3>Karen Bell</h3>
-                  </summary>
-                  <p>I worked with Jamie at lovemoney.com for 3 years. He was a pleasure to work alongside. I could always go to him for creative feedback or if I needed help with any coding issues he could always offer great advice. Jamie is hard working and reliable with a meticulous attention detail. We have continued to work together on several successful projects since leaving lovemoney.com and I'm sure we will continue to collaborate together in the future.</p>
-                </details>
-              </li>
-              <li>
-                <details name="testimonials">
-                  <summary>
-                    <a href="https://www.linkedin.com/in/tobyhewson/" target="_blank">
-                      <img src="https://media.licdn.com/dms/image/v2/D4E03AQF4ELkhPNHEVw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1692035814872?e=1738800000&v=beta&t=f6a1mLnjY2W21hqb4tIBe4abxmBytWDZ9KCedbVBmkE" alt="Toby Hewson">
-                    </a>
-                    <h3>Toby Hewson</h3>
-                  </summary>
-                  <p>Jamie has incredibly high standards and is not afraid to break the mould to exceed them. Excellence delivered.</p>
-                </details>
-              </li>
-              <li>
-                <details name="testimonials">
-                  <summary>
-                    <a href="https://www.linkedin.com/in/bengilman/" target="_blank">
-                      <img src="https://media.licdn.com/dms/image/v2/D4E03AQHJFg2fN-jP3Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1677156367030?e=1738800000&v=beta&t=CvjoYKYCfB-EWBLg6KZ_90z7cdenF0XAwnFSDwgHkxs" alt="Ben Gilman">
-                    </a>
-                    <h3>Ben Gilman</h3>
-                  </summary>
-                  <p>Jamie is a versatile designer with a great balance of creative and technical skills and a proven ability to get work done on time. He is also always keen to go the extra mile to design to proper web standards and do things the right way!</p>
-                </details>
-              </li>
-              <li>
-                <details name="testimonials">
-                  <summary>
-                    <a href="https://www.linkedin.com/in/david-f-b57a5110/" target="_blank">
-                      <img src="https://media.licdn.com/dms/image/v2/C5603AQHJqUIt4cX9wQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1517738760250?e=1738800000&v=beta&t=3FX-aYm6sbIePUmSgzF8gmp2kkcrnhwzJXY15uu1fF4" alt="David F">
-                    </a>
-                    <h3>David F</h3>
-                  </summary>
-                  <p>Jamie is an excellent web designer, his fantastic creativity coupled with technical knowledge and work ethic makes him an excellent choice for anyone with a web project large or small and I have no hesitation in recommending him.</p>
-                </details>
-              </li>
-            </ul> 
-          </div>
-        </section>
+      <!-- film effects — sit above both countdown and video -->
+      <div class="cine-sepia"></div>
+      <!-- grain canvas injected here by JS -->
+      <div class="cine-interference"></div>
+      <div class="cine-scanlines"></div>
+      <div class="cine-vignette"></div>
+      <div class="cine-flicker"></div>
+      <div class="cine-glitch-a"></div>
+      <div class="cine-glitch-b"></div>
+      <div class="cine-scratch"></div>
+      <div class="cine-mark cine-mark--tr"></div>
+      <div class="cine-mark cine-mark--br"></div>
+      <div class="cine-title">
+        <span>JS&nbsp;·&nbsp;MMXXVI</span>
+        <span>Reel&nbsp;01</span>
+      </div>
 
-        <section id="getInTouch" name="getInTouch" class="content-grid" role="region" aria-label="Get In Touch">
-          <header>
-            <h2>Get In Touch</h2>
-          </header>
-          <div> 
-            <form name="contact" netlify>
-              <p>
-                <label>Name <input type="text" name="name" /></label>
-              </p>
-              <p>
-                <label>Email <input type="email" name="email" /></label>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
-            </form> 
-          </div>
-        </section>
+      <!-- inter-frame flash — above everything in the frame -->
+      <div id="cd-flash"></div>
 
-    </main>
+    </div>
 
-    <footer>
-      <nav class="social"></nav>
-      <p class="copyright">Copyright</p>
-    </footer>
-
-  
+    <div class="cine-strip cine-strip--r"></div>
   </div>
 
-  <!-- <div id="availability" aria-label="Jamie's current availability for work.">
-    <h4>Currently available for work</h4>
-    <a href="mailto:jamie@jamie-scott.co.uk">jamie@jamie-scott.co.uk</a>
-  </div> -->
+  <!-- full-screen darkening overlay (used during expansion) -->
+  <div id="expand-overlay"></div>
+</div>
+
+<!-- signature + scroll indicator -->
+<div id="hero-sig">
+  <div class="hero-sig-inner">
+    <img src="assets/svgs/signature-white.svg" alt="Jamie Scott">
+    <div class="scroll-hint" id="scroll-hint">
+      <div class="sh-line-wrap"></div>
+      <div class="sh-chevrons">
+        <div class="sh-chev"></div>
+        <div class="sh-chev"></div>
+        <div class="sh-chev"></div>
+      </div>
+      <span class="sh-text">Scroll to enter</span>
+    </div>
+  </div>
+</div>
+
+<div id="cine-skip">Skip →</div>
+
+<script src="src/js/main.js" defer></script>
 
 </body>
 </html>

@@ -1,0 +1,42 @@
+#cine-stage.expand .cine-strip {
+  inline-size: 0;
+  opacity: 0;
+}
+
+#cine-stage.expand .cine-interference {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+#cine-stage.expand .cine-scanlines {
+  opacity: 0;
+}
+
+#cine-stage.expand .cine-sepia {
+  opacity: 0;
+}
+
+#cine-stage.expand .cine-title {
+  opacity: 0;
+}
+
+#cine-stage.expand .cine-glitch-a,
+#cine-stage.expand .cine-glitch-b {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+#cine-stage.expand .cine-scratch {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+#cine-stage.expand .cine-mark {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+#cine-stage.expand #cine-video {
+  filter: sepia(0) contrast(1) brightness(1) saturate(1);
+  transition: filter 1.6s ease 0.6s;
+}

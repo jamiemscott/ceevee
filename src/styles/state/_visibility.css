@@ -1,0 +1,11 @@
+#hero-sig.visible {
+  opacity: 1;
+}
+
+#hero-sig.visible .hero-sig-inner img {
+  transform: translateY(0);
+}
+
+.scroll-hint.show {
+  opacity: 1;
+}

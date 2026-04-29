@@ -1,0 +1,229 @@
+/* warm sepia grade — mix-blend-mode tints the countdown rings too */
+.cine-sepia {
+  background: rgba(82, 46, 8, 0.24);
+  inset: 0;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 1.2s ease 0.9s;
+  z-index: 6;
+}
+
+/* grain canvas injected by JS at z-index 7 */
+
+/* rolling interference band */
+.cine-interference {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 8;
+}
+
+.cine-interference::after {
+  animation: rollBand 6s linear infinite;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(240, 237, 232, 0.03) 30%,
+    rgba(240, 237, 232, 0.07) 50%,
+    rgba(240, 237, 232, 0.03) 70%,
+    transparent 100%
+  );
+  block-size: 30%;
+  content: '';
+  inset-block-start: -30%;
+  inset-inline: 0;
+  position: absolute;
+}
+
+@keyframes rollBand {
+  0%   { inset-block-start: -30%; }
+  100% { inset-block-start: 110%; }
+}
+
+/* scanlines */
+.cine-scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.16) 2px,
+    rgba(0, 0, 0, 0.16) 4px
+  );
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.6s ease 0.8s;
+  z-index: 9;
+}
+
+/* vignette */
+.cine-vignette {
+  background: radial-gradient(
+    ellipse 88% 82% at 50% 50%,
+    transparent 52%,
+    rgba(0, 0, 0, 0.42) 78%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 10;
+}
+
+.cine-vignette::after {
+  box-shadow:
+    inset  2px 0  8px rgba(0, 0, 0, 0.7),
+    inset -2px 0  8px rgba(0, 0, 0, 0.7),
+    inset  0  3px 8px rgba(0, 0, 0, 0.6),
+    inset  0 -3px 8px rgba(0, 0, 0, 0.6);
+  content: '';
+  inset: 0;
+  position: absolute;
+}
+
+/* flicker */
+.cine-flicker {
+  animation: flicker 11s steps(1) infinite;
+  background: transparent;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 11;
+}
+
+@keyframes flicker {
+  0%, 9.8%, 10.6%, 49.8%, 51.2%, 73.8%, 74.8%, 100% { background: transparent; }
+  10%   { background: rgba(0, 0, 0, 0.14); }
+  10.2% { background: rgba(255, 248, 220, 0.05); }
+  50%   { background: rgba(0, 0, 0, 0.10); }
+  51%   { background: rgba(255, 248, 220, 0.04); }
+  74%   { background: rgba(0, 0, 0, 0.18); }
+  74.4% { background: rgba(255, 248, 220, 0.06); }
+}
+
+/* glitch bands */
+.cine-glitch-a,
+.cine-glitch-b {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 12;
+}
+
+.cine-glitch-a {
+  animation: glitchA 9s steps(1) infinite;
+  background: rgba(200, 155, 60, 0.18);
+}
+
+.cine-glitch-b {
+  animation: glitchB 13.7s steps(1) infinite;
+  background: rgba(130, 20, 20, 0.22);
+}
+
+@keyframes glitchA {
+  0%, 85%, 88.5%, 92%, 100% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    opacity: 0;
+    transform: none;
+  }
+  86%   { clip-path: polygon(0 14%, 100% 14%, 100% 23%, 0 23%); opacity: 1;   transform: translateX(7px); }
+  87%   { clip-path: polygon(0 57%, 100% 57%, 100% 64%, 0 64%); opacity: 1;   transform: translateX(-9px); }
+  88%   { clip-path: polygon(0 38%, 100% 38%, 100% 42%, 0 42%); opacity: 0.5; transform: translateX(4px); }
+  91%   { clip-path: polygon(0 72%, 100% 72%, 100% 76%, 0 76%); opacity: 1;   transform: translateX(-6px); }
+  91.5% { opacity: 0; }
+}
+
+@keyframes glitchB {
+  0%, 61%, 64.5%, 100% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    opacity: 0;
+    transform: none;
+  }
+  62% { clip-path: polygon(0 44%, 100% 44%, 100% 51%, 0 51%); opacity: 1;   transform: translateX(-5px); }
+  63% { clip-path: polygon(0 22%, 100% 22%, 100% 27%, 0 27%); opacity: 0.8; transform: translateX(10px); }
+  64% { opacity: 0; }
+}
+
+/* hair scratch */
+.cine-scratch {
+  animation: scratch 17s steps(1) infinite;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 242, 200, 0.6) 18%,
+    rgba(255, 242, 200, 0.35) 55%,
+    rgba(255, 242, 200, 0.15) 80%,
+    transparent 100%
+  );
+  inline-size: 1px;
+  inset-block: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 13;
+}
+
+.cine-scratch::after {
+  background: inherit;
+  content: '';
+  inset: 0;
+  opacity: 0.3;
+  position: absolute;
+  transform: translateX(1px);
+}
+
+@keyframes scratch {
+  0%, 63%, 65%, 100% { inset-inline-start: 30%; opacity: 0; }
+  64%                 { inset-inline-start: 38%; opacity: 1; }
+}
+
+/* reel cue marks */
+.cine-mark {
+  block-size: 20px;
+  border: 2.5px solid rgba(255, 242, 200, 0.9);
+  border-radius: 50%;
+  inline-size: 20px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 14;
+}
+
+.cine-mark--tr { inset-block-start: 8px; inset-inline-end: 8px; }
+.cine-mark--br { inset-block-end: 8px;   inset-inline-end: 8px; }
+
+/* film title strip */
+.cine-title {
+  align-items: flex-end;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 100%);
+  color: rgba(255, 242, 200, 0.28);
+  display: flex;
+  font-family: var(--mf);
+  font-size: clamp(7px, 1vw, 9px);
+  inset-block-end: 0;
+  inset-inline: 0;
+  justify-content: space-between;
+  letter-spacing: 0.18em;
+  padding-block: 8px;
+  padding-inline: 12px;
+  pointer-events: none;
+  position: absolute;
+  text-transform: uppercase;
+  transition: opacity 0.5s ease 0.7s;
+  z-index: 15;
+}
+
+/* inter-frame flash — highest z, covers everything inside the frame */
+#cd-flash {
+  background: rgba(240, 237, 232, 1);
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.03s linear;
+  z-index: 50;
+}

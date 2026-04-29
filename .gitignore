@@ -1,1 +1,9 @@
 .idx/dev.nix
+node_modules/
+dist/
+.DS_Store
+*.bak
+.claude/
+assets/video/
+assets/css/
+

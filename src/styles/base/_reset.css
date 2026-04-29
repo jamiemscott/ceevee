@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #060402;
+  block-size: 100%;
+  color: var(--t1);
+  font-family: var(--bf);
+  overflow: hidden;
+}
