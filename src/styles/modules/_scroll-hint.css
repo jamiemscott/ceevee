@@ -1,7 +1,7 @@
 .scroll-hint {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 18px;
   opacity: 0;
   transition: opacity 1.2s ease;
@@ -9,45 +9,44 @@
 
 /* travelling pulse line */
 .sh-line-wrap {
-  position: relative;
-  width: 1px;
-  height: 72px;
   background: rgba(139, 26, 26, 0.15);
+  block-size: 72px;
+  inline-size: 1px;
   overflow: hidden;
+  position: relative;
 }
 
 .sh-line-wrap::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 55%;
-  top: -55%;
-  background: linear-gradient(to bottom, transparent, rgba(139, 26, 26, 0.9), transparent);
   animation: lineTravel 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background: linear-gradient(to bottom, transparent, rgba(139, 26, 26, 0.9), transparent);
+  block-size: 55%;
+  content: '';
+  inset-block-start: -55%;
+  inset-inline: 0;
+  position: absolute;
 }
 
 @keyframes lineTravel {
-  0%   { top: -55%; }
-  100% { top: 110%; }
+  0%   { inset-block-start: -55%; }
+  100% { inset-block-start: 110%; }
 }
 
 /* cascading chevrons */
 .sh-chevrons {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 6px;
 }
 
 .sh-chev {
-  width: 13px;
-  height: 13px;
-  border-right: 1.5px solid var(--red);
-  border-bottom: 1.5px solid var(--red);
-  transform: rotate(45deg);
-  opacity: 0;
   animation: chevDrop 1.9s ease-in-out infinite;
+  block-size: 13px;
+  border-block-end: 1.5px solid var(--red);
+  border-inline-end: 1.5px solid var(--red);
+  inline-size: 13px;
+  opacity: 0;
+  transform: rotate(45deg);
 }
 
 .sh-chev:nth-child(1) { animation-delay: 0s; }
@@ -61,12 +60,12 @@
 }
 
 .sh-text {
+  animation: textBreath 2s ease-in-out infinite;
+  color: rgba(240, 237, 232, 0.18);
   font-family: var(--mf);
   font-size: 9px;
-  color: rgba(240, 237, 232, 0.18);
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  animation: textBreath 2s ease-in-out infinite;
 }
 
 @keyframes textBreath {

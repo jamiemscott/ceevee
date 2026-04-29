@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -6,10 +8,10 @@
 
 html,
 body {
-  height: 100%;
+  -webkit-font-smoothing: antialiased;
   background: #060402;
+  block-size: 100%;
   color: var(--t1);
   font-family: var(--bf);
-  -webkit-font-smoothing: antialiased;
   overflow: hidden;
 }
